@@ -1,0 +1,29 @@
+{
+  "name": "@google/persona-engine",
+  "version": "1.0.0",
+  "description": "Statistically-validated persona generation engine with bootstrapped sampling, cluster validation, and Bayesian updating",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:ci": "vitest run --coverage",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "persona",
+    "clustering",
+    "statistics",
+    "machine-learning",
+    "data-science",
+    "bayesian",
+    "monte-carlo"
+  ],
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^3.2.4"
+  }
+}
