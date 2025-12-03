@@ -189,29 +189,29 @@ async function runDemo() {
   const engine = new PersonaEngine({
     // Clustering configuration
     clusteringAlgorithm: 'kmeans',
-    minClusterSize: 15,
-    maxClusters: 8,
+    minClusterSize: 10,
+    maxClusters: 6,
 
     // Bootstrap sampling for stability
-    bootstrapSamples: 50,
-    sampleSize: 0.75, // Use 75% of data per sample
-    minSampleSize: 50,
+    bootstrapSamples: 30,
+    sampleSize: 0.8,
+    minSampleSize: 30,
 
     // Monte Carlo for robustness
-    monteCarloIterations: 30,
-    perturbationMagnitude: 0.08,
+    monteCarloIterations: 20,
+    perturbationMagnitude: 0.05,
 
-    // Statistical thresholds
+    // Statistical thresholds - lower for demo
     significanceLevel: 0.05,
-    minConfidence: 0.4,
-    minStabilityScore: 0.35,
+    minConfidence: 0.3,
+    minStabilityScore: 0.1, // Lower threshold to find clusters
 
     // Bayesian updating
     enableBayesianUpdates: true,
     priorStrength: 10,
 
     // Output configuration
-    minPersonaSize: 20,
+    minPersonaSize: 10,
     maxTraitsPerPersona: 12,
   });
   console.log('   ✅ Engine initialized\n');
